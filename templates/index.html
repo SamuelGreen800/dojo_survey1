@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="stylesheet" href="sty.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <form action="/submit" method="POST" class="bg-dark text-primary p-4 rounded col-6 mx-auto" id="form">
+        
+        <h1>Dojo Survey</h1>
+
+        <div class="form-group">
+            <label for="name" name="name">Name:</label>
+            <input type="text" name="name" class="form-control">
+        </div>
+        
+        
+        <div class="form-group">
+            <label for="location">Home location</label>
+            <select name="location" class="form-control">
+                <option value="">--Select a location--</option>
+                <option value="San Jose">Jan Jose</option>
+                <option value="El Paso">El Paso</option>
+                <option value="The Jungle">The Jungle</option>
+                <option value="Deep in the earth's crust">Deep in the earth's crust</option>
+            </select>
+            </div>
+
+        <h3 class="pt-3 pb-3">Do you love Python?</h3>
+
+        <div class="form-check form-check-inline" name="python">
+            <input class="form-check-input" type="checkbox" value="Yes" name="python" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+            Yes
+            </label>
+        </div>
+        <div class="form-check-inline">
+            <input class="form-check-input" type="checkbox" value="No" name="python" id="flexCheckUnchecked">
+            <label class="form-check-label" for="flexCheckDefault">
+            No
+            </label>
+        </div>
+
+
+
+        
+    <h4 class="py-2">What is your species?</h4>
+    <div name="species1">
+        <div class="form-check" name="species1">
+            <input class="form-check-input" type="radio" name="species" value="Human" id="flexRadioDefault1">
+            <label class="form-check-label" for="human">
+                Human
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="species" value="Sasquatch" id="flexRadioDefault1">
+            <label class="form-check-label" for="Sasquatch">
+            Sasquatch
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="species" value="Lizard-Person" id="flexRadioDefault1">
+            <label class="form-check-label" for="Lizard-Person">
+            Lizard Person
+            </label>
+        
+        </div>
+
+        <div class="form-group txt-right">
+            <label for="comments">Comments</label>
+            <textarea name="comments" cols="40" rows="10" class="form-control"></textarea>
+        </div>
+        
+        
+        <input type="submit" value="Submit" class="btn btn-primary btn-lg" id="submit">
+        </div>
+        </form>
+
+</body>
+</html>
